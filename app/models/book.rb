@@ -5,7 +5,7 @@ class Book < ApplicationRecord
   def old?
     return false unless year_published
     if
-      Date.current.year - year_published.to_i > 25
+      Date.current.year - year_published.to_i > 80
       return true
     else
       return false
