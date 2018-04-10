@@ -1,11 +1,11 @@
 class Book < ApplicationRecord
   validates :title, presence: true
-  #validates :year_published, numericality: { only_integer: true }
+  validates :year_published, numericality: { only_integer: true }
 
   def old?
     return false unless year_published
     if
-      Date.current.year - year_published.to_i > 25
+      Date.current.year - year_published.to_i > 80
       return true
     else
       return false
